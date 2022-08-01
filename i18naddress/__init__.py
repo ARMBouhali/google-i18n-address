@@ -401,9 +401,9 @@ def normalize_address(address):
             errors["country_code"] = "required"
         else:
             cleaned_data["country_code"] = country_code.upper()
-        _normalize_field(
-            "country_area", rules, cleaned_data, rules.country_area_choices, errors
-        )
+#         _normalize_field(
+#             "country_area", rules, cleaned_data, rules.country_area_choices, errors
+#         )
         _normalize_field("city", rules, cleaned_data, rules.city_choices, errors)
         _normalize_field(
             "city_area", rules, cleaned_data, rules.city_area_choices, errors
